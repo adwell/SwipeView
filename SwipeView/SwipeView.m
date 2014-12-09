@@ -940,8 +940,9 @@
         if (_defersItemViewLoading)
         {
             startIndex = _currentItemIndex - ceilf(x / itemWidth) - 1;
-            // amd: only preload one item
-            numberOfVisibleItems = ceilf(width / itemWidth) + 1;
+            // amd: only preload one item. We use "2" because of the -1 in the
+            // previous line.
+            numberOfVisibleItems = ceilf(width / itemWidth) + 2;
         }
 
         //create indices
